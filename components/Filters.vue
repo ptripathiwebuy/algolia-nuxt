@@ -12,8 +12,7 @@
             </div>
             <Facet attribute-name="availability" title="availability" />
             <Facet attribute-name="stores" title="stores" />
-            <Facet attribute-name="categoryFriendlyName" title="categoryFriendlyName" v-show="hasResultforQuery(state, results)" />
-           
+            <Facet attribute-name="categoryFriendlyName" title="categoryFriendlyName" v-show="hasResultforQuery(state, results)" />           
             <template v-if="results">
                <template v-for="attribute in getAttributes(results)">
                   <Facet :key="attribute" :attribute-name="attribute" :title="attribute"  :isHorizontal="true"  />
